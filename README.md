@@ -36,3 +36,28 @@ It also only considers strings that conform either to the hexidecimal or base64 
 entro.py -b64entropy 5
 entro.py -hexentropy 4
 ```
+
+By default, output will be in the form - `path/to/file : line number : secret`
+
+```bash
+entro.py
+...
+./target/325643454.txt : 451 : 706c100d319514ebd09e2c34286be31d
+...
+```
+use -v for more detail
+
+```bash
+entro.py -v
+-----------
+File: entro.py
+Line: 10
+Type: Base64
+Shannon Entropy: 6.02236781303
+Secret: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=
+Full Line:
+        BASE64_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123
+456789+/="
+```
+
+
