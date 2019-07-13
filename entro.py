@@ -127,7 +127,7 @@ def find_entropy(filename):
 						p = "\n-----------\nFile: " + filename + "\nLine: " + str(line_counter) + "\nType: Base64\nShannon Entropy: " + str(b64_entropy) \
 							+ "\nSecret: " + string + "\nFull Line:\n\t" + line.strip()
 					else:
-						p = "\n"+ filename + " : " + str(line_counter) + " : " + string
+						p = "\n"+ filename + " : " + str(line_counter) + " : " + line
 					printable.append(p)
 			for string in hex_strings: # step through each hex string
 				hex_entropy = shannon_entropy(string, HEX_CHARS) # calculate entropy
@@ -137,7 +137,7 @@ def find_entropy(filename):
 						p = "\n-----------\nFile: " + filename + "\nLine: " + str(line_counter) + "\nType: HEX\nShannon Entropy: " + str(hex_entropy) \
 							+ "\nSecret: " + string + "\nFull Line:\n\t" + line.strip()
 					else:
-						p = "\n"+ filename + " : " + str(line_counter) + " : " + string
+						p = "\n"+ filename + " : " + str(line_counter) + " : " + line
 					printable.append(p)
 
 			
